@@ -49,7 +49,12 @@ use .updateDisplay to update display
 
 use .appendNumber to create the strings of numbers in the display
 
-use an if commaned to only allow use of the period key once
+use an 'if' commaned to only allow use of the period key once
+
+set command keys to clear the screen when used
+
+
+
 
 
 

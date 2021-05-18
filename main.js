@@ -1,15 +1,16 @@
 // alert("Alex is testing his connection");
 
 class Calculator {
-  constructor(currentOperandTextElement, previousOperandTextElement) {
+  constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
     this.currentOperandTextElement = currentOperandTextElement
     this.clear()
   }
     clear() {
-      this.currentOperand = ''
       this.previousOperand = ''
+      this.currentOperand = ''
       this.operation = undefined
+      this.previousOperandTextElement = 0
     }
 
 
@@ -70,18 +71,18 @@ class Calculator {
         this.getDisplayNumber(this.currentOperand)
       if (this.operation != null) {
         this.previousOperandTextElement.innerText = 
-          `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+         `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
       }
     }
 }
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-opperation]')
-const equalsButton = document.querySelector('[data-equals')
-const deleteButton = document.querySelector('[data-delete')
-const allClearButton = document.querySelector('[data-all-clear')
-const previousOperandTextElement = document.querySelector('[data-previous-operand')
-const currentOperandTextElement = document.querySelector('[data-current-operand')
+const equalsButton = document.querySelector('[data-equals]')
+const deleteButton = document.querySelector('[data-delete]')
+const allClearButton = document.querySelector('[data-all-clear]')
+const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
